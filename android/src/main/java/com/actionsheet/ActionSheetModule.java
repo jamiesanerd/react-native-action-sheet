@@ -57,6 +57,9 @@ public class ActionSheetModule extends ReactContextBaseJavaModule {
     if (options.hasKey("title") && options.getString("title") != null && !options.getString("title").isEmpty()) {
       builder.setTitle(options.getString("title"));
     }
+    if (options.hasKey("message") && options.getString("message") != null && !options.getString("meassage").isEmpty()) {
+      builder.setMessage(options.getString("message"));
+    }
 
     builder.setAdapter(adapter, new DialogInterface.OnClickListener() {
       public void onClick(DialogInterface dialog, int index) {
